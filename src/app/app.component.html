@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./app.component.css">
+
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Marno Jacobs</title>
+    </head>
+    <body>
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Marno Jacobs</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title"><span class="home__title-color">Marno Jacobs</span><br>Programmer</h1>
+                </div>
+
+                <div class="home__img">    
+                    <img src="../assets/images/pp.png" alt="">
+                </div>
+
+                <div class="home__social">
+                    <a target="blank"href="https://www.facebook.com/marno.jacobs.94/" class="home__social-icon"><i class='bx bxl-facebook'></i></a>
+                    <a target="blank"href="https://www.instagram.com/marnojacobs13/?hl=en" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a target="blank"href="https://twitter.com/Jacobs_Marno" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                </div>
+
+                
+            </section>
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+                <div class="about__container bd-grid">
+                    <div>
+                        <p class="about__text">My name is Marno Jacobs. I am currently in my final semester of my BSc Information Technology degree. I am passionate about sports and programming. I enjoy gaming with my friends and creating interesting programs. I am capable of working under pressure and adapting to new situations. I believe that one of my biggest advantages is that I can get my work done without having to stress. This has helped me tremendously in University as I am capable to stay calm and collected and focus on the task at hand.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <p class="skills__text">I have listed my capabilities in a few programming languages below. In addition to these skills, I am also capable of learning very quickly, performing under pressure and expanding my knowledge.</p>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-code-curly skills__icon'></i>
+                                <span class="skills__name">Python</span>
+                            </div>
+                            <div class="skills__bar skills__python">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">75%</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-file-css skills__icon'></i>
+                                <span class="skills__name">CSS</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">70%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-copyright skills__icon' ></i>
+                                <span class="skills__name">C#/C++</span>
+                            </div>
+                            <div class="skills__bar skills__c">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-coffee skills__icon'></i>
+                                <span class="skills__name">Java</span>
+                            </div>
+                            <div class="skills__bar skills__java">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="work section " id="work">
+              <h2 class="section-title">Work Experiance</h2>
+              <div class="work__container bd-grid">
+                  <div>
+                      <p class="work__text">Although I do not have any experiance in the IT industry yet, I have worked part time jobs at a Butchery and at a Law firm in the holidays while at University. I did not take a gap year so I did not have the oppurtunity to build up work experiance yet.</p>           
+                  </div>                                   
+              </div>
+          </section>
+
+            <section class="contact section" id="contact">
+                <h2 class="section-title">CORONA API</h2>
+                <div class="home__img2">   
+                    <h1>Confirmed Cases: {{confirmed}}<br>Recovered Cases: {{recovered}}<br>Deaths: {{deaths}}</h1>
+                </div>
+                <div class="home__img2">   
+                    <button (click)="getCoronaData()">Get Corona</button>
+                </div>                                 
+            </section>
+
+            <section class="contact section" id="contact">
+                <h2 class="section-title">GitHub API</h2>
+                <button (click) = getUsers()>GitHub Profile</button>     
+                <app-users [users]="users"></app-users>                
+            </section>
+
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Youtube API</h2>
+                <div class="api__container bd-grid">
+                    <div class="home__img">    
+                        <ul *ngFor="let channel of channels">
+                            <a target="_blank" href="https://www.youtube.com/channel/{{channel.id.channelId}}">
+                            <img width="200" height="200"src={{channel.snippet.thumbnails.medium.url}}/></a>
+                        </ul>
+                      </div>                                   
+                </div>
+            </section>
+        
+        </main>
+
+        <footer class="footer">
+            <p class="footer__title">Marno Jacobs</p>
+            <div class="footer__social">
+                <a target="blank"href="https://www.facebook.com/marno.jacobs.94/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a target="blank"href="https://www.instagram.com/marnojacobs13/?hl=en" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a target="blank"href="https://twitter.com/Jacobs_Marno" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <p>est. 1999</p>
+        </footer> 
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
